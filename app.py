@@ -17,21 +17,21 @@ mysql = MySQL(app)
 # Routes
 @app.route('/')
 def root():
-   #query = "SELECT * FROM diagnostic;"
-   #query1 = 'DROP TABLE IF EXISTS diagnostic;';
-   #query2 = 'CREATE TABLE diagnostic(id INT PRIMARY KEY AUTO_INCREMENT, text VARCHAR(255) NOT NULL);';
-   #query3 = 'INSERT INTO diagnostic (text) VALUES ("MySQL is working!")';
-   #query4 = 'SELECT * FROM diagnostic;';
-   #cur = mysql.connection.cursor()
-   #cur.execute(query1)
-   #cur.execute(query2)
-   #cur.execute(query3)
-   #cur.execute(query4)
-   #results = cur.fetchall()
+   query = "SELECT * FROM diagnostic;"
+   query1 = 'DROP TABLE IF EXISTS diagnostic;';
+   query2 = 'CREATE TABLE diagnostic(id INT PRIMARY KEY AUTO_INCREMENT, text VARCHAR(255) NOT NULL);';
+   query3 = 'INSERT INTO diagnostic (text) VALUES ("MySQL is working!")';
+   query4 = 'SELECT * FROM diagnostic;';
+   cur = mysql.connection.cursor()
+   cur.execute(query1)
+   cur.execute(query2)
+   cur.execute(query3)
+   cur.execute(query4)
+   results = cur.fetchall()
 
-   #return results[0]
+   return results[0]
 
-   return render_template("main.j2")
+   #return render_template("main.j2")
 
 
 # Listener
