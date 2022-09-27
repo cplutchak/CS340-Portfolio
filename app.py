@@ -31,7 +31,7 @@ def root():
 
    #return results[0]
 
-   return render_template("main.j2" , results) 
+   return render_template("main.j2") 
 
 
 # Listener
