@@ -2,7 +2,6 @@ from flask import Flask, render_template, json, redirect
 from flask_mysqldb import MySQL
 from flask import request
 import os
-import codecs
 
 app = Flask(__name__)
 
@@ -30,7 +29,7 @@ def root():
    cur.execute(query4)
    results = cur.fetchall()
 
-   return "<h1>MySQL Results:</h1>" + results[0]
+   return "<h1>MySQL Results:</h1>" + str(results[0])
 
    #return render_template("main.j2") 
 
