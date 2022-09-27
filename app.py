@@ -2,6 +2,7 @@ from flask import Flask, render_template, json, redirect
 from flask_mysqldb import MySQL
 from flask import request
 import os
+import codecs
 
 app = Flask(__name__)
 
