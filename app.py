@@ -32,9 +32,10 @@ def root():
 
     return results[0]
 
+    return render_template("main.j2")
+
 
 # Listener
 if __name__ == "__main__":
-
-    #Start the app on port 3000, it will be different once hosted
-    app.run(port=6754, debug=True)
+    port = int(os.environ.get('PORT', 6754))
+    app.run(port=port, debug=True)
