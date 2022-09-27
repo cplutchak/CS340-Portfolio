@@ -29,9 +29,9 @@ def root():
    cur.execute(query4)
    results = cur.fetchall()
 
-   return results[0]
+   #return results[0]
 
-   #return render_template("main.j2")
+   return render_template("main.j2" , results) 
 
 
 # Listener
