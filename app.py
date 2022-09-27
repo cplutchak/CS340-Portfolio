@@ -29,7 +29,7 @@ def root():
    cur.execute(query4)
    results = cur.fetchall()
 
-   return "<h1>MySQL Results:</h1>" + results[0]
+   return results[0]
 
    #return render_template("main.j2") 
 
